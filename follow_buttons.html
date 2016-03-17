@@ -2,24 +2,24 @@
 <head>
 	<meta charset="utf-8">
 	<link rel="stylesheet" href="common.css">
-	<link rel="stylesheet" href="icomoon/style.css">
+	<link rel="stylesheet" href="https://rawgit.com/aloerina01/follow-buttons/master/icomoon/style.css">
 </head>
 <body>
 	<div class="follow-buttons">
 		<div class="follow-button follow-button-blog">
-			<div class="follow-button-inner follow-button-inner-blog">
-				<i class="icon icon-al-blog"></i>
+			<div class="follow-button-inner follow-button-inner-blog" onClick="blog();">
+				<i class="icon blogicon-hatenablog"></i>
 				<span class="tooltip tooltip-feedly">読者になる</span>
 			</div>
 		</div>
 		<div class="follow-button follow-button-twitter">
-			<div class="follow-button-inner follow-button-inner-twitter">
-				<i class="icon icon-al-twitter"></i>
+			<div class="follow-button-inner follow-button-inner-twitter" onClick="twitter();">
+				<i class="icon fa fa-twitter"></i>
 				<span class="tooltip tooltip-twitter">Twitterをフォロー</span>
 			</div>
 		</div>
 		<div class="follow-button follow-button-feedly">
-			<div class="follow-button-inner follow-button-inner-feedly">
+			<div class="follow-button-inner follow-button-inner-feedly" onClick="feedly();">
 				<i class="icon icon-al-feedly"></i>
 				<span class="tooltip tooltip-feedly">Feedlyで購読</span>
 			</div>
@@ -32,14 +32,16 @@
 		</div>
 	</div>
 </body>
-<script src="jquery-2.1.4.min.js"></script>
+
 <script>
-	function animation() {
-		$('.target').addClass('play');
-		setTimeout(function(){
-			$('.img-field').addClass('show');
-			$('.img-sun').addClass('show');
-		}, 3800);
+	function blog() {
+		window.open('http://blog.hatena.ne.jp/はてなID/ブログURL(http://以降)/subscribe');
+	};
+	function twitter() {
+		window.open('https://twitter.com/intent/follow?screen_name=アカウント');
+	};
+	function feedly() {
+		window.open('http://feedly.com/i/welcome/feed/ブログフィードのURL');
 	};
 </script>
 </html>
