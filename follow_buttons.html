@@ -1,0 +1,45 @@
+<html lang="ja">
+<head>
+	<meta charset="utf-8">
+	<link rel="stylesheet" href="common.css">
+	<link rel="stylesheet" href="icomoon/style.css">
+</head>
+<body>
+	<div class="follow-buttons">
+		<div class="follow-button follow-button-blog">
+			<div class="follow-button-inner follow-button-inner-blog">
+				<i class="icon icon-al-blog"></i>
+				<span class="tooltip tooltip-feedly">読者になる</span>
+			</div>
+		</div>
+		<div class="follow-button follow-button-twitter">
+			<div class="follow-button-inner follow-button-inner-twitter">
+				<i class="icon icon-al-twitter"></i>
+				<span class="tooltip tooltip-twitter">Twitterをフォロー</span>
+			</div>
+		</div>
+		<div class="follow-button follow-button-feedly">
+			<div class="follow-button-inner follow-button-inner-feedly">
+				<i class="icon icon-al-feedly"></i>
+				<span class="tooltip tooltip-feedly">Feedlyで購読</span>
+			</div>
+		</div>
+		<div class="follow-button follow-button-github display-none">
+			<div class="follow-button-inner follow-button-inner-github">
+				<i class="icon icon-al-github"></i>
+				<span class="tooltip tooltip-github">GitHubでフォロー</span>
+			</div>
+		</div>
+	</div>
+</body>
+<script src="jquery-2.1.4.min.js"></script>
+<script>
+	function animation() {
+		$('.target').addClass('play');
+		setTimeout(function(){
+			$('.img-field').addClass('show');
+			$('.img-sun').addClass('show');
+		}, 3800);
+	};
+</script>
+</html>

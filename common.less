@@ -1,0 +1,170 @@
+@base-color: #fff;
+@twitter-color: #29B6F6;
+@github-color: #546E7A;
+@blog-color: #78909C;
+@feedly-color: #66BB6A;
+
+@tooltip-bg-color: #263238;
+@tooltip-text-color: #fff;
+
+.display-none {
+	display: none !important;
+}
+
+.follow-buttons {
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	position: relative;
+	width: 100%;
+	.follow-button {
+		position: relative;
+		width: 25%;
+		max-width: 65px;
+		min-width: 54px;
+		&:before {
+			padding-top: 100%;//幅に対する高さの割合
+			display: block;
+			content: "";
+		}
+		&-inner {
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			text-align: center;
+			border: 2px solid #7f7f7f;
+			border-radius: 50%;
+			transition: all 0.4s ease;
+			cursor: pointer;
+			.icon {
+				font-size: 20px;
+			}
+			
+			&-blog {
+				border-color: @blog-color;
+				color: @blog-color;
+				background-color: @base-color;
+				&:hover {
+					background-color: @blog-color;
+					color: @base-color;
+				}
+			}
+			&-twitter {
+				border-color: @twitter-color;
+				color: @twitter-color;
+				background-color: @base-color;
+				&:hover {
+					background-color: @twitter-color;
+					color: @base-color;
+				}
+			}
+			&-github {
+				border-color: @github-color;
+				color: @github-color;
+				background-color: @base-color;
+				&:hover {
+					background-color: @github-color;
+					color: @base-color;
+				}
+			}
+			
+			&-feedly {
+				border-color: @feedly-color;
+				color: @feedly-color;
+				background-color: @base-color;
+				&:hover {
+					background-color: @feedly-color;
+					color: @base-color;
+				}
+			}
+			
+			.tooltip {
+				display: none;
+				position: absolute;
+				width: 100px;
+				left: 50%;
+				top: 110%;
+				opacity: 0;
+				// transition: all 0.4s ease;
+				background-color: @tooltip-bg-color;
+				color: @tooltip-text-color;
+				font-size: 0.6rem;
+				text-align: center;
+				border-radius: 4px;
+				padding: 6px;
+				-webkit-transform: translate(-50%,0);
+				-moz-transform: translate(-50%,0);
+				-ms-transform: translate(-50%,0);
+				-o-transform: translate(-50%,0);
+				transform: translate(-50%,-0);
+			}
+			&:hover .tooltip {
+				display: block;
+				// opacity: 1;			
+				animation-name: fade-in;			
+				-moz-animation-name: fade-in;		
+				-webkit-animation-name: fade-in;
+				animation-duration: 0.4s;
+				animation-delay: 0.4s;
+				-moz-animation-duration: 0.4s;
+				-moz-animation-delay: 0.4s;
+				-webkit-animation-duration: 0.4s;
+				-webkit-animation-delay: 0.4s;
+				animation-fill-mode: forwards;
+				-moz-animation-fill-mode: forwards;
+				-webkit-animation-fill-mode: forwards;
+			}
+		}
+	}
+}
+
+@keyframes fade-in {
+	0% {
+	display: none;
+	opacity: 0;
+	}
+
+	1% {
+	display: block;
+	opacity: 0;
+	}
+
+	100% {
+	display: block;
+	opacity: 1;
+	}
+}
+
+@-moz-keyframes fade-in {
+	0% {
+	display: none;
+	opacity: 0;
+	}
+
+	1% {
+	display: block;
+	opacity: 0;
+	}
+
+	100% {
+	display: block;
+	opacity: 1;
+	}
+}
+
+@-webkit-keyframes fade-in {
+	0% {
+		display: none;
+		opacity: 0;
+	}
+
+	1% {
+		display: block;
+		opacity: 0;
+	}
+}
