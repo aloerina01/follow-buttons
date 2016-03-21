@@ -24,10 +24,10 @@
 				<span class="tooltip tooltip-feedly">Feedlyで購読</span>
 			</div>
 		</div>
-		<div class="follow-button follow-button-github display-none">
-			<div class="follow-button-inner follow-button-inner-github">
-				<i class="icon icon-al-github"></i>
-				<span class="tooltip tooltip-github">GitHubでフォロー</span>
+		<div class="follow-button follow-button-github">
+			<div class="follow-button-inner follow-button-inner-github" onClick="github();">
+				<i class="icon fa fa-github"></i>
+				<span class="tooltip tooltip-github">GitHubをフォロー</span>
 			</div>
 		</div>
 	</div>
@@ -42,6 +42,9 @@
 	};
 	function feedly() {
 		window.open('http://feedly.com/i/welcome/feed/ブログフィードのURL');
+	};
+	function github() {
+		window.open('https://github.com/アカウント名');
 	};
 </script>
 </html>
